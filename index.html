@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Deluxe</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--  font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Quicksand', sans-serif; -->
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        @font-face {
+            src: url(ARDECODE.tff);
+            font-family: ardecode;
+        }
+
+        header {
+            background-color: #2A2E33;
+            height: 100px;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .logo {
+            /* border: 1px solid red; */
+            height: 100%;
+            width: 40%;
+            text-align: center;
+            float: left;
+        }
+
+        .logo img {
+            margin-top: 6.5%;
+        }
+
+        .menubar {
+            /* border: 1px solid red; */
+            height: 100%;
+            width: 60%;
+            float: left;
+        }
+
+        .menubar ul {
+            list-style: none;
+        }
+
+        .menubar ul li {
+            display: block;
+            float: left;
+        }
+
+        .menubar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 38px 10px 40px 18px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            transition: 0.3s;
+            /*  margin-top: 30px; */
+            /* border: 1px solid white; */
+        }
+
+        .menubar ul li a:hover {
+            background-color: #1E2329;
+            border-top: 4px solid #FFD700;
+        }
+
+        sector {
+            height: 1000px;
+            width: auto;
+            background-color: #EFEFEF;
+        }
+
+        .slidertxt {
+            height: 460px;
+            width: 100%;
+            background-color: #00CCFF;
+            text-align: center;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .slidertxt img {
+            margin-top: 79px;
+        }
+
+        .bookings {
+            height: 110px;
+            width: 70%;
+            text-align: center;
+            background-color: #2A2E33;
+            margin: 400px auto 40px auto;
+            box-shadow: 0px 25px 10px -10px #888888;
+        }
+
+        .bookings ul {
+            list-style: none;
+        }
+
+        .bookings ul li {
+            display: block;
+            float: left;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: lighter;
+            color: #FFD700;
+            padding: 10px;
+            text-align: left;
+            margin-top: 14px;
+        }
+
+        .bookings ul li form input {
+            border-radius: 10px;
+            padding: 6px;
+            width: 100%;
+            border: none;
+
+        }
+
+        .bookings ul li:last-child {
+            margin-top: 30px;
+            margin-left: 50px;
+            text-align: center;
+            border-radius: 10px;
+            width: 20%;
+            background-color: #FFD700;
+            font-weight: bold;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+
+        .bookings ul li a:last-child {
+            text-decoration: none;
+            color: #2A2E33;
+            font-size: 20px;
+        }
+
+        .bookimg {
+            text-align: center;
+            width: auto;
+            height: auto;
+            background-color: #EFEFEF;
+            border-top: 1px solid #D1D2D2;
+        }
+
+        .bookimg img {
+            width: 80%;
+        }
+
+        .package {
+            height: 300px;
+            width: auto;
+            text-align: center;
+            background-color: #EFEFEF;
+            border-bottom: 1px solid #D1D2D2;
+        }
+
+        .package img {
+            width: 17%;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 300%;
+            background-color: #EFEFEF;
+        }
+
+        .roomtype {
+            height: 750px;
+            width: auto;
+            background-image: url(ourhotelbg.png);
+        }
+
+        .ourroom {
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .typesofroom {
+            float: left;
+            width: 30%;
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+
+
+        /*--=========This is footer start*/
+
+        footer {
+            background-color: #333333;
+            height: 326px;
+            padding-top: 20px;
+        }
+
+        .left {
+            float: left;
+            padding-left: 12px;
+
+        }
+
+        .left h1 {
+            color: white;
+            font-size: 18px;
+        }
+
+        .left p {
+            color: white;
+            text-align: left;
+            padding-top: 10px;
+            font-size: 12px;
+        }
+
+        .left p span {
+            color: #b1970e;
+        }
+
+        .left button {
+            margin-top: 23px;
+            border: none;
+            border-radius: 10px;
+            height: auto;
+            ;
+            width: 90px;
+            background-color: #e7cb2c;
+        }
+
+        .footer1 {
+            width: 20%;
+
+        }
+
+        .footer2 {
+            width: 20%;
+
+        }
+
+        .footer3 {
+            width: 35%;
+
+        }
+
+        .footer4 {
+            width: 20%;
+
+        }
+
+        .left label {
+            color: white;
+            font-size: 12px;
+        }
+
+        .left input {
+            background: none;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 2px 5px;
+            margin-top: 5px;
+        }
+
+        }
+
+        .ftr01 {
+            margin-top: 10px;
+        }
+
+        .ftr02 {
+            margin-top: 10px;
+        }
+
+        .ftr03 {
+            margin-top: 10px;
+        }
+
+        .ftr03 button {
+            margin-top: 10px;
+        }
+
+        /*--=========This is footer end*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="hotel-deluxe.png" alt="">
+        </div>
+
+        <div class="menubar">
+            <ul>
+                <li><a href="">START</a></li>
+                <li><a href="">FACILITIES</a></li>
+                <li><a href="">RESTAURANT</a></li>
+                <li><a href="">CONFERENCE</a></li>
+                <li><a href="">BOOKINGS</a></li>
+                <li><a href="">CONTACT US</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <sector>
+        <div class="slidertxt">
+            <img src="sildertxt.png" alt="">
+        </div>
+
+        <div class="bookings">
+            <ul>
+                <li>Arrival
+                    <form action=""><input type="text"></form>
+                </li>
+                <li>Departure
+                    <form action=""><input type="text"></form>
+                </li>
+                <li>Room Type
+                    <form action=""><input type="text"></form>
+                </li>
+                <li><a href="">View Prices</a></li>
+            </ul>
+        </div>
+
+        <div class="bookimg">
+            <img src="bookimg.png" alt="">
+        </div>
+
+        <div class="package">
+            <img src="gold.png" alt="">
+            <img src="silver.png" alt="">
+            <img src="bronze.png" alt="">
+        </div>
+    </sector>
+
+
+    <div class="roomtype">
+        <div class="ourroom">
+            <img src="ourrootype.png" alt="">
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+
+        <div class="typesofroom">
+            <img src="urpic.jpg" alt="">
+            <h4>standard room type</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae voluptates deserunt aspernatur obcaecati.</p>
+        </div>
+    </div>
+
+    <div class="footerlogo">
+        <img src="footerlogo.png" alt="">
+    </div>
+
+
+    <!--=========This is footer start-->
+    <footer>
+
+        <div class="footer1 left">
+            <h1>ABOUT THIS HOTEL</h1>
+            <p>Suspendisse erat mi, tincidunt sit amet massa quis, commodo fermentum diam. Sed nec dui nec nunc tempor interdum. <br><br> Ut vulputate augue urna, ut porta dolor imperdiet a. Vestibulum nec leo eu magna aliquam ornare.</p>
+        </div>
+        <div class="footer2 left">
+            <h1>LATEST NEWS</h1>
+            <p>Grand Hotel joins DeluxeHotels <br> <span>15 AUG</span></p>
+
+            <p>Happy Christmas To Everyone<br> <span>15 AUG</span></p>
+
+            <p>Best Places To Visit 2014<br> <span>15 AUG</span></p>
+
+            <p>Various Offers <br> <span>15 AUG</span></p>
+        </div>
+        <div class="footer3 left">
+            <h1>JOIN DELUXEHOTELS</h1>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vestibulum blandit egestas. Nam id lectus vel orci luctus consectetur eget id elit. In tortor odio, pellentesque eu arcu sit amet, lacinia euismod nisi. Aliquam sodales tristique mauris ac fermentum. Donec vel varius ipsum. Pellentesque vitae mollis massa. <br><br> There is no costs or whatsoever so sign up today!</p>
+            <button>READ MORE</button>
+        </div>
+        <div class="footer4 left">
+            <h1>MEMBERS AREA</h1>
+            <div class="ftr01">
+                <label for="username">Userame</label><br>
+                <input type="text">
+            </div>
+            <div class="ftr02">
+                <label for="password">Password</label><br>
+                <input type="password">
+            </div>
+            <div class="ftr03">
+                <button>LOGIN</button>
+            </div>
+        </div>
+
+    </footer>
+    <!--=========This is footer end-->
+
+</body>
+
+</html>
